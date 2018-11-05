@@ -1,12 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Curso de JavaScript</title>
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <h1>Calculadora de IMC</h1>
+        </div>
+    </header>
+    <main class='container'>
+        <section>
+            <h2>Paciente</h2>
+                <table>
+                    <tr>
+                        <th>Nome:</th>
+                        <th>Peso:</th>
+                        <th>Altura:</th>
+                        <th>IMC:</th>
+                    </tr>
+                    <tr class="paciente">
+                        <td class="info-nome">José</td>
+                        <td class="info-peso">80</td>
+                        <td class="info-altura">1.80</td>
+                        <td class="info-imc"></td>
+                    </tr>
+                    <tr class="paciente">
+                            <td class="info-nome">Maria</td>
+                            <td class="info-peso">50</td>
+                            <td class="info-altura">1.57</td>
+                            <td class="info-imc"></td>
+                        </tr>
+                        <tr class="paciente">
+                            <td class="info-nome">Carlos</td>
+                            <td class="info-peso">78</td>
+                            <td class="info-altura">1.67</td>
+                            <td class="info-imc"></td>
+                        </tr>
+                        <tr class="paciente">
+                            <td class="info-nome">Lucas</td>
+                            <td class="info-peso">83</td>
+                            <td class="info-altura">1.90</td>
+                            <td class="info-imc"></td>
+                        </tr>
+                </table>
+                
+                <button id="calcula-imcs" class="botao">Calcular IMCs</button>
+        </section>
+        <section>
+            <h2>Adicionar paciente</h2>
+                <form>
+                    <fieldset>
+                        <label for="nome">Nome:</label>
+                        <input id="campo-nome" type="text" placeholder="Digite o nome do paciente">
+                    </fieldset>
+                    <fieldset>
+                        <label for="peso">Peso:</label>
+                        <input id="campo-peso" type="number" placeholder="Digite o peso do paciente">
+                    </fieldset>
+                    <fieldset>
+                        <label for="altura">Altura:</label>
+                        <input id="campo-altura" type="number" placeholder="Digite a altura do paciente">
+                    </fieldset>
+                    <button id="adicionar-paciente" class="botao">Adicionar Paciente</button>
+                </form>
+        </section>
+    </main>
 </body>
+        <script src="js/calcula-imc.js"></script>
 </html>
