@@ -1,23 +1,34 @@
 // Fórmula IMC => peso / altura * altura
 
-var tdPeso = document.getElementById('peso-1');
-var tdAltura = document.getElementById('altura-1');
-var tdImc = document.getElementById('imc-1');
 
-var peso = tdPeso.textContent;
-var altura = tdAltura.textContent;
+var trsPacientes = document.getElementsByClassName('paciente');
 
-var paciente = {
-    peso : peso,
-    altura : altura
+var cont = 0;
+
+while(cont < trsPacientes.length){
+
+    var pacienteTr = trsPacientes[cont];
+
+    var tdNome = pacienteTr.getElementsByClassName('info-nome')[0];
+    var tdPeso = pacienteTr.getElementsByClassName('info-peso')[0];
+    var tdAltura = pacienteTr.getElementsByClassName('info-altura')[0];
+
+    var paciente = {
+        nome : tdNome.textContent,
+        peso : tdPeso.textContent,
+        altura : tdAltura.textContent
+    }
+    
+    if(paciente.altura != 0){
+        var imc = paciente.peso / (paciente.altura*paciente.altura);
+       
+        var tdImc = pacienteTr.getElementsByClassName('info-imc')[0];
+        tdImc.textContent = imc;
+
+        console.log(imc);
+    }else{
+        console.log("A altura deve ser diferente de zero!");
+    }
+
+    cont++;
 }
-
-if(altura != 0){
-    var imc = paciente.peso / (paciente.altura*paciente.altura);
-    tdImc.textContent = imc;
-    console.log(imc);
-}else{
-    console.log("A altura deve ser diferente de zero!");
-}
-
-console.log(peso);
