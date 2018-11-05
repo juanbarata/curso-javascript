@@ -3,9 +3,7 @@
 
 var trsPacientes = document.getElementsByClassName('paciente');
 
-var cont = 0;
-
-while(cont < trsPacientes.length){
+for(cont = 0, cont < trsPacientes.length, cont++){
 
     var pacienteTr = trsPacientes[cont];
 
@@ -30,5 +28,4 @@ while(cont < trsPacientes.length){
         console.log("A altura deve ser diferente de zero!");
     }
 
-    cont++;
 }
