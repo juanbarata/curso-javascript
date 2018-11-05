@@ -1,9 +1,9 @@
 // Fórmula IMC => peso / altura * altura
-
+var cont;
 
 var trsPacientes = document.getElementsByClassName('paciente');
 
-for(cont = 0, cont < trsPacientes.length, cont++){
+for(var cont = 0; cont < trsPacientes.length; cont++){
 
     var pacienteTr = trsPacientes[cont];
 
